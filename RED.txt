@@ -1556,13 +1556,13 @@ function redzlib:MakeWindow(Configs)
 	})
 	
 	local CloseButton = Create("ImageButton", {
-		Size = UDim2.new(0, 14, 0, 14),
+		Size = UDim2.new(0, 38, 0, 38),
 		Position = UDim2.new(1, -10, 0.5),
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://10747384394",
 		AutoButtonColor = false,
-		Name = "Close"
+		Name = "Fechar"
 	})
 	
 	local MinimizeButton = SetProps(CloseButton:Clone(), {
@@ -1596,7 +1596,7 @@ function redzlib:MakeWindow(Configs)
 		
 		if Minimized then
 			MinimizeButton.Image = "rbxassetid://10734896206"
-			CreateTween({MainFrame, "Size", SaveSize, 0.75, true})
+			CreateTween({MainFrame, "Size", SaveSize, 1.80, true})
 			ControlSize1.Visible = true
 			ControlSize2.Visible = true
 			Minimized = false
@@ -1605,7 +1605,7 @@ function redzlib:MakeWindow(Configs)
 			SaveSize = MainFrame.Size
 			ControlSize1.Visible = false
 			ControlSize2.Visible = false
-			CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 28), 0.25, true})
+			CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 56), 0.75, true})
 			Minimized = true
 		end
 		
@@ -1616,9 +1616,9 @@ function redzlib:MakeWindow(Configs)
 	end
 	function Window:AddMinimizeButton(Configs)
 		local Button = MakeDrag(Create("ImageButton", ScreenGui, {
-			Size = UDim2.fromOffset(35, 35),
+			Size = UDim2.fromOffset(60, 60),
 			Position = UDim2.fromScale(0.15, 0.15),
-			BackgroundTransparency = 1,
+			BackgroundTransparency = 0.50,
 			BackgroundColor3 = Theme["Color Hub 2"],
 			AutoButtonColor = false
 		}))
@@ -1683,9 +1683,9 @@ function redzlib:MakeWindow(Configs)
 				Text = DText,
 				TextXAlignment = "Left",
 				TextColor3 = Theme["Color Dark Text"],
-				TextSize = 15,
+				TextSize = 25,
 				Position = UDim2.fromOffset(15, 25),
-				BackgroundTransparency = 1,
+				BackgroundTransparency = 0.7,
 				TextWrapped = true
 			}), "DarkText")
 		})Make("Gradient", Frame, {Rotation = 270})Make("Corner", Frame)
@@ -1695,7 +1695,7 @@ function redzlib:MakeWindow(Configs)
 			Position = UDim2.fromScale(0, 1),
 			AnchorPoint = Vector2.new(0, 1),
 			BackgroundColor3 = Theme["Color Hub 2"],
-			BackgroundTransparency = 1
+			BackgroundTransparency = 0.7
 		}, {
 			Create("UIListLayout", {
 				Padding = UDim.new(0, 10),
