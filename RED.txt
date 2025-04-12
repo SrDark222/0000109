@@ -12,12 +12,12 @@ local redzlib = {
 	Themes = {
 		Darker = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 0))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0.34, 100, 0)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(25.5, 0, 0)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(2.55, 5, 0))
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
-			["Color Stroke"] = Color3.fromRGB(20, 20, 20),
+			["Color Stroke"] = Color3.fromRGB(0, 0, 0),
 			["Color Theme"] = Color3.fromRGB(0, 0, 0),
 			["Color Text"] = Color3.fromRGB(255, 0, 0),
 			["Color Dark Text"] = Color3.fromRGB(100, 100, 100)
@@ -2607,7 +2607,7 @@ function redzlib:MakeWindow(Configs)
 			local InviteHolder = Create("Frame", Container, {
 				Size = UDim2.new(1, 0, 0, 80),
 				Name = "Option",
-				BackgroundTransparency = 1
+				BackgroundTransparency = 0.7
 			})
 			
 			local InviteLabel = Create("TextLabel", InviteHolder, {
@@ -2616,7 +2616,7 @@ function redzlib:MakeWindow(Configs)
 				TextColor3 = Color3.fromRGB(40, 150, 255),
 				Font = Enum.Font.GothamBold,
 				TextXAlignment = "Left",
-				BackgroundTransparency = 1,
+				BackgroundTransparency = 0.7,
 				TextSize = 10,
 				Text = Invite
 			})
@@ -2632,7 +2632,7 @@ function redzlib:MakeWindow(Configs)
 				Size = UDim2.new(0, 30, 0, 30),
 				Position = UDim2.new(0, 7, 0, 7),
 				Image = Logo,
-				BackgroundTransparency = 1
+				BackgroundTransTextWrappe
 			})Make("Corner", ImageLabel, UDim.new(0, 4))Make("Stroke", ImageLabel)
 			
 			local LTitle = InsertTheme(Create("TextLabel", FrameHolder, {
@@ -2654,7 +2654,7 @@ function redzlib:MakeWindow(Configs)
 				Font = Enum.Font.Gotham,
 				TextColor3 = Theme["Color Dark Text"],
 				TextXAlignment = "Left",
-				BackgroundTransparency = 1,
+				BackgroundTransparency = 0.8,
 				TextSize = 8,
 				Text = Desc
 			}), "DarkText")
