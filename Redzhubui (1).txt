@@ -12,12 +12,12 @@ local redzlib = {
 	Themes = {
 		Darker = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 25, 25)),
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
 				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32.5, 32.5, 32.5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 255))
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(100, 0, 0))
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
-			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
+			["Color Stroke"] = Color3.fromRGB(0, 0, 0),
 			["Color Theme"] = Color3.fromRGB(88, 101, 242),
 			["Color Text"] = Color3.fromRGB(243, 243, 243),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
@@ -1596,7 +1596,7 @@ function redzlib:MakeWindow(Configs)
 		
 		if Minimized then
 			MinimizeButton.Image = "rbxassetid://10734896206"
-			CreateTween({MainFrame, "Size", SaveSize, 0.25, true})
+			CreateTween({MainFrame, "Size", SaveSize, 1.5, true})
 			ControlSize1.Visible = true
 			ControlSize2.Visible = true
 			Minimized = false
