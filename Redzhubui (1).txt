@@ -19,7 +19,7 @@ local redzlib = {
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
 			["Color Stroke"] = Color3.fromRGB(0, 0, 0),
 			["Color Theme"] = Color3.fromRGB(88, 101, 242),
-			["Color Text"] = Color3.fromRGB(243, 243, 243),
+			["Color Text"] = Color3.fromRGB(200, 0, 0),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
 		},
 		Dark = {
@@ -1556,7 +1556,7 @@ function redzlib:MakeWindow(Configs)
 	})
 	
 	local CloseButton = Create("ImageButton", {
-		Size = UDim2.new(0, 14, 0, 14),
+		Size = UDim2.new(0, 54, 0, 54),
 		Position = UDim2.new(1, -10, 0.5),
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
